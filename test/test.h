@@ -16,9 +16,6 @@ class StatementTest : public ::testing::Test {
  protected:
   void SetUp() override {
     c1 = std::make_unique<Customer>(Customer("John"));
-    c2 = std::make_unique<Customer>(Customer("Pete"));
-    c3 = std::make_unique<Customer>(Customer("Phil"));
-    c4 = std::make_unique<Customer>(Customer("Joe"));
     m1 = std::make_unique<Movie>(Movie("Amazing Spiderman 63", Movie::NEW_RELEASE));
     m2 = std::make_unique<Movie>(Movie("Peter Pan", Movie::CHILDRENS));
     m3 = std::make_unique<Movie>(Movie("Clockwork Orange", Movie::REGULAR));
@@ -30,7 +27,7 @@ class StatementTest : public ::testing::Test {
   }
 
   void TearDown() override {}
-  std::unique_ptr<Customer> c1, c2, c3, c4;
+  std::unique_ptr<Customer> c1;
   std::unique_ptr<Movie> m1, m2, m3, m4;
   std::unique_ptr<Rental> r1, r2, r3, r4;
 
