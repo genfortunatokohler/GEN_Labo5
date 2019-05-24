@@ -1,3 +1,5 @@
+#include <utility>
+
 // Rental.h
 #ifndef RENTAL_H
 #define RENTAL_H
@@ -5,7 +7,7 @@
 
 class Rental {
  public:
-  Rental(const Movie &movie, int daysRented) : _movie(movie), _daysRented(daysRented) {}
+  Rental(Movie movie, int daysRented) : _movie(std::move(movie)), _daysRented(daysRented) {}
 
   int getDaysRented() const {
     return _daysRented;

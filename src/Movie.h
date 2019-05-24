@@ -1,3 +1,5 @@
+#include <utility>
+
 // Movie.h
 #ifndef MOVIE_H
 #define MOVIE_H
@@ -9,7 +11,7 @@ class Movie {
   static const int REGULAR = 0;
   static const int NEW_RELEASE = 1;
 
-  Movie(const std::string &title, int priceCode = REGULAR) : _title(title), _priceCode(priceCode) {}
+  Movie(std::string title, int priceCode = REGULAR) : _title(std::move(title)), _priceCode(priceCode) {}
 
   int getPriceCode() const {
     return _priceCode;

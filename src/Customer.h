@@ -1,3 +1,5 @@
+#include <utility>
+
 // Customer.h
 #ifndef CUSTOMER_H
 #define CUSTOMER_H
@@ -8,7 +10,7 @@
 class Customer {
  public:
   Customer() = default;
-  explicit Customer(const std::string &name) : _name(name) {};
+  explicit Customer(std::string name) : _name(std::move(name)) {};
 
   void addRental(const Rental &arg) {
     _rentals.push_back(arg);
