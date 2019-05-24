@@ -2,6 +2,7 @@
 #include <sstream>
 #include <vector>
 #include "Customer.h"
+#include "MoviePrice.h"
 
 using std::ostringstream;
 using std::vector;
@@ -33,17 +34,13 @@ string Customer::statement()
         // determine amounts for each line
         switch ( each.getMovie().getPriceCode() ) {
             case Movie::REGULAR:
-                thisAmount += 2;
-                if ( each.getDaysRented() > 2 )
-                    thisAmount += ( each.getDaysRented() - 2 ) * 1.5 ;
+                thisAmount += MoviePrice::REGULAR.getPrice(each.getDaysRented());
                 break;
             case Movie::NEW_RELEASE:
-                thisAmount += each.getDaysRented() * 3;
+                thisAmount += MoviePrice::NEW_RELEASE.getPrice(each.getDaysRented());
                 break;
             case Movie::CHILDRENS:
-                thisAmount += 1.5;
-                if ( each.getDaysRented() > 3 )
-                    thisAmount += ( each.getDaysRented() - 3 ) * 1.5;
+                thisAmount += MoviePrice::CHILDRENS.getPrice(each.getDaysRented());
                 break;
         }
 
