@@ -4,35 +4,26 @@
 #include <string>
 
 class Movie {
-public:
-    static const int CHILDRENS   = 2;
-    static const int REGULAR     = 0;
-    static const int NEW_RELEASE = 1;
+ public:
+  static const int CHILDRENS = 2;
+  static const int REGULAR = 0;
+  static const int NEW_RELEASE = 1;
 
-    Movie( const std::string& title, int priceCode = REGULAR );
+  Movie(const std::string &title, int priceCode = REGULAR) : _title(title), _priceCode(priceCode) {}
 
-    int getPriceCode() const;
-    void setPriceCode( int arg );
-    std::string getTitle() const;
+  int getPriceCode() const {
+    return _priceCode;
+  }
+  void setPriceCode(int arg) {
+    _priceCode = arg;
+  }
+  std::string getTitle() const {
+    return _title;
+  }
 
-private:
-    std::string _title;
-    int _priceCode;
+ private:
+  std::string _title;
+  int _priceCode;
 };
-
-inline Movie::
-Movie( const std::string& title, int priceCode )
-        : _title( title )
-        , _priceCode( priceCode )
-{}
-
-inline int Movie::
-getPriceCode() const { return _priceCode; }
-
-inline void Movie::
-setPriceCode( int arg ) { _priceCode = arg; }
-
-inline std::string Movie::
-getTitle() const { return _title; }
 
 #endif // MOVIE_H
