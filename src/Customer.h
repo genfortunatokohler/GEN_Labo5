@@ -11,14 +11,10 @@
 class Customer {
  public:
   Customer() = default;
-  explicit Customer(std::string name) : _name(std::move(name)) {};
+  explicit Customer(std::string name);
 
-  void addRental(const Rental &arg) {
-    _rentals.push_back(arg);
-  }
-  std::string getName() const {
-    return _name;
-  }
+  void addRental(const Rental &arg);
+  std::string getName() const;
   std::string statement();
 
  private:

@@ -8,6 +8,16 @@ using std::vector;
 
 using namespace std;
 
+Customer::Customer(std::string name) : _name(std::move(name)) {}
+
+void Customer::addRental(const Rental &arg) {
+  _rentals.push_back(arg);
+}
+
+std::string Customer::getName() const {
+  return _name;
+}
+
 string Customer::statement()
 {
     double totalAmount = 0;

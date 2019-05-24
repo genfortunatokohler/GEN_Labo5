@@ -11,17 +11,11 @@ class Movie {
   static const int REGULAR = 0;
   static const int NEW_RELEASE = 1;
 
-  explicit Movie(std::string title, int priceCode = REGULAR) : _title(std::move(title)), _priceCode(priceCode) {}
+  explicit Movie(std::string title, int priceCode = REGULAR);
 
-  int getPriceCode() const {
-    return _priceCode;
-  }
-  void setPriceCode(int arg) {
-    _priceCode = arg;
-  }
-  std::string getTitle() const {
-    return _title;
-  }
+  int getPriceCode() const;
+  void setPriceCode(int arg);
+  std::string getTitle() const;
 
  private:
   std::string _title;
