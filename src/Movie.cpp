@@ -4,16 +4,16 @@ const int Movie::CHILDRENS;
 const int Movie::REGULAR;
 const int Movie::NEW_RELEASE;
 
-Movie::Movie(std::string title, int priceCode) : _title(std::move(title)), _priceCode(priceCode) {}
+Movie::Movie(std::string title, int priceCode) : title_(std::move(title)), price_code_(priceCode) {}
 
 int Movie::getPriceCode() const {
-  return _priceCode;
+  return price_code_;
 }
 
 void Movie::setPriceCode(int arg) {
-  _priceCode = arg;
+  price_code_ = arg;
 }
 
 std::string Movie::getTitle() const {
-  return _title;
+  return title_;
 }

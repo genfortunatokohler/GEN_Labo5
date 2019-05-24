@@ -18,8 +18,8 @@ class Customer {
   std::string statement();
 
  private:
-  std::string _name;
-  std::vector<Rental> _rentals;
+  std::string name_;
+  std::vector<Rental> rentals_;
 };
 
 #endif // CUSTOMER_H

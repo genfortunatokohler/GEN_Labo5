@@ -18,8 +18,8 @@ class Movie {
   std::string getTitle() const;
 
  private:
-  std::string _title;
-  int _priceCode;
+  std::string title_;
+  int price_code_;
 };
 
 #endif // MOVIE_H

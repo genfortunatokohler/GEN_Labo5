@@ -7,18 +7,18 @@
 
 class Rental {
  public:
-  Rental(Movie movie, int daysRented) : _movie(std::move(movie)), _daysRented(daysRented) {}
+  Rental(Movie movie, int daysRented) : movie_(std::move(movie)), days_rented_(daysRented) {}
 
   int getDaysRented() const {
-    return _daysRented;
+    return days_rented_;
   }
   const Movie &getMovie() const {
-    return _movie;
+    return movie_;
   }
 
  private:
-  Movie _movie;
-  int _daysRented;
+  Movie movie_;
+  int days_rented_;
 };
 
 #endif // RENTAL_H

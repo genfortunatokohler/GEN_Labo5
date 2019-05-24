@@ -8,22 +8,22 @@ using std::vector;
 
 using namespace std;
 
-Customer::Customer(std::string name) : _name(std::move(name)) {}
+Customer::Customer(std::string name) : name_(std::move(name)) {}
 
 void Customer::addRental(const Rental &arg) {
-  _rentals.push_back(arg);
+  rentals_.push_back(arg);
 }
 
 std::string Customer::getName() const {
-  return _name;
+  return name_;
 }
 
 string Customer::statement()
 {
     double totalAmount = 0;
     int frequentRenterPoints = 0;
-    vector< Rental >::iterator iter = _rentals.begin();
-    vector< Rental >::iterator iter_end = _rentals.end();
+    vector< Rental >::iterator iter = rentals_.begin();
+    vector< Rental >::iterator iter_end = rentals_.end();
     ostringstream result;
     result << "Rental Record for " << getName() << "\n";
     for ( ; iter != iter_end; ++iter ) {
