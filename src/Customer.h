@@ -18,7 +18,7 @@ class Customer {
   }
   std::string getName() const {
     return _name;
-  };
+  }
   std::string statement();
 
  private:
