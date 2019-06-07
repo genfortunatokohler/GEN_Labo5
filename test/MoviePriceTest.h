@@ -9,18 +9,18 @@
 #include "../src/MoviePrice.h"
 
 TEST(MoviePriceTest, NEW_RELEASECalculateCorrecly) {
-  MoviePrice movie_price = MoviePrice::NEW_RELEASE;
+  const MoviePrice& movie_price = MoviePrice::NEW_RELEASE;
   EXPECT_EQ(movie_price.getPrice(2), 6);
 }
 
 TEST(MoviePriceTest, REGULARCalculateCorrecly) {
-  MoviePrice movie_price = MoviePrice::REGULAR;
+  const MoviePrice& movie_price = MoviePrice::REGULAR;
   EXPECT_EQ(movie_price.getPrice(35), 51.5);
   EXPECT_EQ(movie_price.getPrice(99), 147.5);
 }
 
 TEST(MoviePriceTest, CHILDRENSCalculateCorrecly) {
-  MoviePrice movie_price = MoviePrice::CHILDRENS;
+  const MoviePrice& movie_price = MoviePrice::CHILDRENS;
   EXPECT_EQ(movie_price.getPrice(22), 30);
 }
 

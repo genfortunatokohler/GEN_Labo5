@@ -28,12 +28,7 @@ string Customer::statement() {
 
   for (const Rental &rental : rentals_) {
     // add frequent renter points
-    frequentRenterPoints++;
-
-    // add bonus for a two day new release rental
-    if ((&rental.getMovie().getPriceCode() == &MoviePrice::NEW_RELEASE)
-        && rental.getDaysRented() > 1)
-      frequentRenterPoints++;
+    frequentRenterPoints += rental.getFrequentRenterPoints();
 
     // show figures for this rental
     result << rental.getFigures();

@@ -21,6 +21,15 @@ class Rental {
     return movie_.getPriceCode().getPrice(days_rented_);
   }
 
+  int getFrequentRenterPoints() const {
+    int result = 1;
+
+    if (days_rented_ > 1 && getMovie().getPriceCode() == MoviePrice::NEW_RELEASE)
+      result += 1;
+
+    return result;
+  }
+
   std::string getFigures() const {
     std::ostringstream result;
 

@@ -13,8 +13,16 @@ class MoviePrice {
   static const MoviePrice NEW_RELEASE;
   static const MoviePrice CHILDRENS;
 
+  MoviePrice(const MoviePrice&) = delete;
+  MoviePrice(MoviePrice&&) = delete;
+
+  bool operator==(const MoviePrice& rhs) const {
+    return this == &rhs;
+  }
+
  private:
-  MoviePrice(double base_price, std::function <double(int)> price_calculation):  base_price_(base_price), price_calculation_(std::move(price_calculation)) {}
+  MoviePrice(const double base_price, std::function <double(int)> price_calculation):  base_price_(base_price), price_calculation_(std::move(price_calculation)) {}
+  ~MoviePrice() = default;
 
  public:
   double getPrice(unsigned int nbDay) const {
