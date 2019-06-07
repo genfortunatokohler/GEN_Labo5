@@ -1,15 +1,17 @@
 #include <iostream>
 
 #include "Customer.h"
+#include "Basket.h"
 
 int main() {
 
-    Customer customer("Olivier");
-    customer.addRental( Rental( Movie("Karate Kid"), 7));
-    customer.addRental( Rental( Movie( "Avengers: Endgame", MoviePrice::NEW_RELEASE ), 5));
-    customer.addRental( Rental( Movie("Snow White", MoviePrice::CHILDRENS), 3 ));
+  Customer customer("Olivier");
+  Basket basket(customer);
+  basket.addRental(Rental(Movie("Karate Kid"), 7));
+  basket.addRental(Rental(Movie("Avengers: Endgame", MoviePrice::NEW_RELEASE), 5));
+  basket.addRental(Rental(Movie("Snow White", MoviePrice::CHILDRENS), 3));
 
-    std::cout << customer.statement() << std::endl;
+  std::cout << basket.billing() << std::endl;
 
-    return 0;
+  return 0;
 }
