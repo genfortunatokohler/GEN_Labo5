@@ -12,9 +12,11 @@ class Rental {
   int getDaysRented() const {
     return days_rented_;
   }
+
   const Movie &getMovie() const {
     return movie_;
   }
+
   double getPrice() const {
     return movie_.getPriceCode().getPrice(days_rented_);
   }

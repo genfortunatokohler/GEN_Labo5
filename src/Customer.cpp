@@ -29,7 +29,7 @@ string Customer::statement()
     for (const Rental & rental : rentals_) {
         double thisAmount = 0;
 
-        thisAmount += rental.getMovie().getPriceCode().getPrice(rental.getDaysRented());
+        thisAmount += rental.getPrice();
 
         // add frequent renter points
         frequentRenterPoints++;
