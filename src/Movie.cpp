@@ -1,17 +1,13 @@
 #include "Movie.h"
 
-const int Movie::CHILDRENS;
-const int Movie::REGULAR;
-const int Movie::NEW_RELEASE;
+Movie::Movie(std::string title, const MoviePrice& movie_price) : title_(std::move(title)), movie_price_(&movie_price) {}
 
-Movie::Movie(std::string title, int priceCode) : title_(std::move(title)), price_code_(priceCode) {}
-
-int Movie::getPriceCode() const {
-  return price_code_;
+const MoviePrice& Movie::getPriceCode() const {
+  return *movie_price_;
 }
 
-void Movie::setPriceCode(int arg) {
-  price_code_ = arg;
+void Movie::setPriceCode(const MoviePrice& movie_price) {
+  movie_price_ = &movie_price;
 }
 
 std::string Movie::getTitle() const {

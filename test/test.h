@@ -16,10 +16,10 @@ class StatementTest : public ::testing::Test {
  protected:
   void SetUp() override {
     c1 = std::make_unique<Customer>(Customer("John"));
-    m1 = std::make_unique<Movie>(Movie("Amazing Spiderman 63", Movie::NEW_RELEASE));
-    m2 = std::make_unique<Movie>(Movie("Peter Pan", Movie::CHILDRENS));
-    m3 = std::make_unique<Movie>(Movie("Clockwork Orange", Movie::REGULAR));
-    m4 = std::make_unique<Movie>(Movie("The Human Centipede", Movie::REGULAR));
+    m1 = std::make_unique<Movie>(Movie("Amazing Spiderman 63", MoviePrice::NEW_RELEASE));
+    m2 = std::make_unique<Movie>(Movie("Peter Pan", MoviePrice::CHILDRENS));
+    m3 = std::make_unique<Movie>(Movie("Clockwork Orange", MoviePrice::REGULAR));
+    m4 = std::make_unique<Movie>(Movie("The Human Centipede", MoviePrice::REGULAR));
     r1 = std::make_unique<Rental>(Rental(*m1, 2));
     r2 = std::make_unique<Rental>(Rental(*m2, 22));
     r3 = std::make_unique<Rental>(Rental(*m3, 35));

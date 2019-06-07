@@ -5,21 +5,19 @@
 #include <string>
 #include <utility>
 
+#include "MoviePrice.h"
+
 class Movie {
  public:
-  static const int CHILDRENS = 2;
-  static const int REGULAR = 0;
-  static const int NEW_RELEASE = 1;
+  explicit Movie(std::string title, const MoviePrice& movie_price = MoviePrice::REGULAR);
 
-  explicit Movie(std::string title, int priceCode = REGULAR);
-
-  int getPriceCode() const;
-  void setPriceCode(int arg);
+  const MoviePrice& getPriceCode() const;
+  void setPriceCode(const MoviePrice& movie_price);
   std::string getTitle() const;
 
  private:
   std::string title_;
-  int price_code_;
+  const MoviePrice* movie_price_;
 };
 
 #endif // MOVIE_H

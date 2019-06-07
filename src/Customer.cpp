@@ -31,23 +31,13 @@ string Customer::statement()
         double thisAmount = 0;
         Rental each = *iter;
 
-        // determine amounts for each line
-        switch ( each.getMovie().getPriceCode() ) {
-            case Movie::REGULAR:
-                thisAmount += MoviePrice::REGULAR.getPrice(each.getDaysRented());
-                break;
-            case Movie::NEW_RELEASE:
-                thisAmount += MoviePrice::NEW_RELEASE.getPrice(each.getDaysRented());
-                break;
-            case Movie::CHILDRENS:
-                thisAmount += MoviePrice::CHILDRENS.getPrice(each.getDaysRented());
-                break;
-        }
+        thisAmount += each.getMovie().getPriceCode().getPrice(each.getDaysRented());
 
         // add frequent renter points
         frequentRenterPoints++;
+
         // add bonus for a two day new release rental
-        if ( ( each.getMovie().getPriceCode() == Movie::NEW_RELEASE )
+        if ( ( &each.getMovie().getPriceCode() == &MoviePrice::NEW_RELEASE )
              && each.getDaysRented() > 1 ) frequentRenterPoints++;
 
         // show figures for this rental
