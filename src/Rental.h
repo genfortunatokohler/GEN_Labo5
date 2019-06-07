@@ -15,6 +15,9 @@ class Rental {
   const Movie &getMovie() const {
     return movie_;
   }
+  double getPrice() const {
+    return movie_.getPriceCode().getPrice(days_rented_);
+  }
 
  private:
   Movie movie_;

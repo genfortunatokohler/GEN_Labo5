@@ -31,7 +31,7 @@ string Customer::statement()
         double thisAmount = 0;
         Rental each = *iter;
 
-        thisAmount += each.getMovie().getPriceCode().getPrice(each.getDaysRented());
+        thisAmount += each.getPrice();
 
         // add frequent renter points
         frequentRenterPoints++;
