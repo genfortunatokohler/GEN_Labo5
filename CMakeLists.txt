@@ -13,7 +13,8 @@ add_executable(Labo5
         src/Movie.h
         src/MoviePrice.h
         src/MoviePrice.cpp
-        src/Rental.h)
+        src/Rental.h
+        src/Rental.cpp)
 
 add_executable(test
         test/test.cpp
@@ -25,6 +26,7 @@ add_executable(test
         src/Movie.h
         src/MoviePrice.h
         src/MoviePrice.cpp
-        src/Rental.h)
+        src/Rental.h
+        src/Rental.cpp)
 
 target_link_libraries(test gtest gmock_main)

@@ -2,37 +2,17 @@
 #ifndef RENTAL_H
 #define RENTAL_H
 
-#include <utility>
 #include "Movie.h"
 
 class Rental {
  public:
   Rental(Movie movie, int daysRented) : movie_(std::move(movie)), days_rented_(daysRented) {}
 
-  int getDaysRented() const {
-    return days_rented_;
-  }
-
-  const Movie &getMovie() const {
-    return movie_;
-  }
-
-  double getPrice() const {
-    return movie_.getPriceCode().getPrice(days_rented_);
-  }
-
-  int getFrequentRenterPoints() const {
-    return 1 + movie_.getPriceCode().getBonusPoints(days_rented_);
-  }
-
-  std::string getFigures() const {
-    std::ostringstream result;
-
-    result << "\t" << getMovie().getTitle() << "\t"
-              << getPrice() << "\n";
-
-    return result.str();
-  }
+  int getDaysRented() const;
+  const Movie &getMovie() const;
+  double getPrice() const;
+  int getFrequentRenterPoints() const;
+  std::string getFigures() const;
 
  private:
   Movie movie_;
