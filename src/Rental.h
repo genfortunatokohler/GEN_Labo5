@@ -22,12 +22,7 @@ class Rental {
   }
 
   int getFrequentRenterPoints() const {
-    int result = 1;
-
-    if (days_rented_ > 1 && getMovie().getPriceCode() == MoviePrice::NEW_RELEASE)
-      result += 1;
-
-    return result;
+    return 1 + movie_.getPriceCode().getBonusPoints(days_rented_);
   }
 
   std::string getFigures() const {
