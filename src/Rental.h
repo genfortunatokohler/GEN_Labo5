@@ -21,6 +21,15 @@ class Rental {
     return movie_.getPriceCode().getPrice(days_rented_);
   }
 
+  std::string getFigures() const {
+    std::ostringstream result;
+
+    result << "\t" << getMovie().getTitle() << "\t"
+              << getPrice() << "\n";
+
+    return result.str();
+  }
+
  private:
   Movie movie_;
   int days_rented_;
