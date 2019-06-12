@@ -8,7 +8,6 @@ class Rental {
  public:
   Rental(const Movie& movie, int daysRented) : movie_(movie), days_rented_(daysRented) {}
 
-  virtual int getDaysRented() const;
   virtual const Movie &getMovie() const;
   virtual double getPrice() const;
   virtual int getFrequentRenterPoints() const;

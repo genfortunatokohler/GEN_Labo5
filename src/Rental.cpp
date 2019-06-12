@@ -3,10 +3,6 @@
 
 #include "Rental.h"
 
-int Rental::getDaysRented() const {
-  return days_rented_;
-}
-
 const Movie &Rental::getMovie() const {
   return movie_;
 }
