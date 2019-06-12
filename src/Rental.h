@@ -6,16 +6,16 @@
 
 class Rental {
  public:
-  Rental(Movie movie, int daysRented) : movie_(std::move(movie)), days_rented_(daysRented) {}
+  Rental(const Movie& movie, int daysRented) : movie_(movie), days_rented_(daysRented) {}
 
-  int getDaysRented() const;
-  const Movie &getMovie() const;
-  double getPrice() const;
-  int getFrequentRenterPoints() const;
-  std::string getFigures() const;
+  virtual int getDaysRented() const;
+  virtual const Movie &getMovie() const;
+  virtual double getPrice() const;
+  virtual int getFrequentRenterPoints() const;
+  virtual std::string getFigures() const;
 
  private:
-  Movie movie_;
+  const Movie& movie_;
   int days_rented_;
 };
 

@@ -11,9 +11,11 @@ class Movie {
  public:
   explicit Movie(std::string title, const MoviePrice& movie_price = MoviePrice::REGULAR);
 
-  const MoviePrice& getPriceCode() const;
-  void setPriceCode(const MoviePrice& movie_price);
-  std::string getTitle() const;
+  virtual const MoviePrice& getPriceCode() const;
+  virtual void setPriceCode(const MoviePrice& movie_price);
+  virtual std::string getTitle() const;
+
+
 
  private:
   std::string title_;

@@ -28,14 +28,18 @@ class MoviePrice {
         price_calculation_(std::move(price_calculation)),
         bonus_point_calculation_(std::move(bonus_point_calculation)) {}
 
+ protected:
+  // protected used for mocking purposes
+  MoviePrice() : MoviePrice(0, nullptr, nullptr) {};
+
   ~MoviePrice() = default;
 
  public:
-  double getPrice(unsigned int nbDay) const {
+  virtual double getPrice(unsigned int nbDay) const {
     return price_calculation_(nbDay);
   }
 
-  double getBonusPoints(unsigned int nbDay) const {
+  virtual double getBonusPoints(unsigned int nbDay) const {
     return bonus_point_calculation_(nbDay);
   }
 

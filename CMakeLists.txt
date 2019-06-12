@@ -22,6 +22,9 @@ add_executable(test
         test/test.cpp
         test/test.h
         test/MoviePriceTest.h
+        test/RentalTest.h
+        test/mock_MoviePrice.h
+        test/mock_movie.h
         src/Customer.cpp
         src/Customer.h
         src/Movie.cpp
@@ -31,6 +34,7 @@ add_executable(test
         src/Rental.h
         src/Rental.cpp
         src/Basket.cpp
-        src/Basket.h)
+        src/Basket.h
+        )
 
 target_link_libraries(test gtest gmock_main)
