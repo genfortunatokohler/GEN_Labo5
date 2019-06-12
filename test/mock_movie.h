@@ -8,6 +8,7 @@
 #include "gmock/gmock.h"  // Brings in Google Mock.
 
 #include "../src/Movie.h"
+#include "mock_MoviePrice.h"
 
 class MockMovie : public Movie {
  public:
@@ -16,6 +17,7 @@ class MockMovie : public Movie {
   MOCK_CONST_METHOD0(getTitle, std::string());
 
   MockMovie(const std::string &title, const MockMoviePrice &moviePrice) : Movie(title, moviePrice) {}
+  MockMovie() : Movie("", MockMoviePrice()){}
 };
 
 #endif //LABO5_MOCK_MOVIE_H

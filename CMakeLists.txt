@@ -20,7 +20,6 @@ add_executable(Labo5
 
 add_executable(test
         test/test.cpp
-        test/test.h
         test/MoviePriceTest.h
         test/RentalTest.h
         test/mock_MoviePrice.h
@@ -35,6 +34,6 @@ add_executable(test
         src/Rental.cpp
         src/Basket.cpp
         src/Basket.h
-        )
+        test/BasketTest.h test/mock_rental.h)
 
 target_link_libraries(test gtest gmock_main)

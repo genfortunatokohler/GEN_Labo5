@@ -2,8 +2,8 @@
 
 #include <sstream>
 
-void Basket::addRental(Rental rental) {
-  rentals_.push_back(std::move(rental));
+void Basket::addRental(const Rental& rental) {
+  rentals_.push_back(std::cref<Rental>(rental));
 }
 
 std::string Basket::billing() const {
