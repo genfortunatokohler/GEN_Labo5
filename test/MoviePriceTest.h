@@ -2,6 +2,7 @@
 #define LABO5_MOVIEPRICETEST_H
 
 #include <gtest/gtest.h>
+
 #include "../src/MoviePrice.h"
 
 TEST(MoviePriceTest, NEW_RELEASE_PriceCalculateCorrecly) {

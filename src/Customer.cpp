@@ -1,7 +1,8 @@
-#include <sstream>
-#include <vector>
 #include "Customer.h"
 #include "MoviePrice.h"
+
+#include <sstream>
+#include <vector>
 
 using std::ostringstream;
 using std::vector;

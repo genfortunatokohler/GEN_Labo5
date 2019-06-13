@@ -1,7 +1,7 @@
+#include "Rental.h"
+
 #include <utility>
 #include <sstream>
-
-#include "Rental.h"
 
 const Movie &Rental::getMovie() const {
   return movie_;

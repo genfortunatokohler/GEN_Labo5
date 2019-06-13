@@ -1,7 +1,7 @@
 #ifndef LABO5_MOCK_MOVIEPRICE_H
 #define LABO5_MOCK_MOVIEPRICE_H
 
-#include "gmock/gmock.h"  // Brings in Google Mock.
+#include <gmock/gmock.h>  // Brings in Google Mock.
 
 #include "../src/MoviePrice.h"
 

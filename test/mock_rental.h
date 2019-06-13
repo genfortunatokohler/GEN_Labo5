@@ -1,9 +1,10 @@
 #ifndef LABO5_MOCK_RENTAL_H
 #define LABO5_MOCK_RENTAL_H
 
-#include "gmock/gmock.h"  // Brings in Google Mock.
+#include <gmock/gmock.h>  // Brings in Google Mock.
 
 #include "../src/Rental.h"
+
 #include "mock_movie.h"
 
 class MockRental : public Rental {

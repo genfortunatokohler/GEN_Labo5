@@ -1,9 +1,10 @@
 #ifndef LABO5_MOCK_MOVIE_H
 #define LABO5_MOCK_MOVIE_H
 
-#include "gmock/gmock.h"  // Brings in Google Mock.
+#include <gmock/gmock.h>  // Brings in Google Mock.
 
 #include "../src/Movie.h"
+
 #include "mock_MoviePrice.h"
 
 class MockMovie : public Movie {

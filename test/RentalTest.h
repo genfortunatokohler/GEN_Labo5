@@ -1,8 +1,8 @@
 #ifndef LABO5_RENTALTEST_H
 #define LABO5_RENTALTEST_H
 
-#include "gmock/gmock.h"
-#include "gtest/gtest.h"
+#include <gmock/gmock.h>
+#include <gtest/gtest.h>
 
 #include "mock_MoviePrice.h"
 #include "mock_movie.h"

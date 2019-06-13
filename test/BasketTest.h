@@ -2,10 +2,12 @@
 #define LABO5_BASKETTEST_H
 
 #include <gtest/gtest.h>
+
 #include "../src/Customer.h"
 #include "../src/Basket.h"
 #include "../src/Movie.h"
 #include "../src/Rental.h"
+
 #include "mock_rental.h"
 
 using ::testing::Exactly;

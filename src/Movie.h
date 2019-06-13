@@ -1,10 +1,10 @@
 #ifndef MOVIE_H
 #define MOVIE_H
 
+#include "MoviePrice.h"
+
 #include <string>
 #include <utility>
-
-#include "MoviePrice.h"
 
 class Movie {
  public:
