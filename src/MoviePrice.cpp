@@ -1,7 +1,3 @@
-//
-// Created by Jonathan Zaehringer on 2019-05-24.
-//
-
 #include "MoviePrice.h"
 
 const MoviePrice MoviePrice::REGULAR(2,

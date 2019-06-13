@@ -1,7 +1,3 @@
-//
-// Created by filipe on 6/12/19.
-//
-
 #ifndef LABO5_MOCK_RENTAL_H
 #define LABO5_MOCK_RENTAL_H
 

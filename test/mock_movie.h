@@ -1,7 +1,3 @@
-//
-// Created by filipe on 6/7/19.
-//
-
 #ifndef LABO5_MOCK_MOVIE_H
 #define LABO5_MOCK_MOVIE_H
 

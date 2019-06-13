@@ -1,9 +1,3 @@
-//
-// Created by filipe on 5/17/19.
-//
-
-// COPYRIGHT 2019 <TBD>
-
 #include <gtest/gtest.h>
 #include <gmock/gmock.h>
 #include "BasketTest.h"

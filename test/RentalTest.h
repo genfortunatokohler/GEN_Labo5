@@ -1,7 +1,3 @@
-//
-// Created by filipe on 6/7/19.
-//
-
 #ifndef LABO5_RENTALTEST_H
 #define LABO5_RENTALTEST_H
 

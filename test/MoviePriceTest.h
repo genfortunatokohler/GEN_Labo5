@@ -1,7 +1,3 @@
-//
-// Created by Jonathan Zaehringer on 2019-05-24.
-//
-
 #ifndef LABO5_MOVIEPRICETEST_H
 #define LABO5_MOVIEPRICETEST_H
 
