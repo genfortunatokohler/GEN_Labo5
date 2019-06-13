@@ -21,4 +21,4 @@ class Movie {
   const MoviePrice* movie_price_;
 };
 
-#endif // MOVIE_H
+#endif  // MOVIE_H

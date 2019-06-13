@@ -1,14 +1,14 @@
 #ifndef LABO5_BASKETTEST_H
 #define LABO5_BASKETTEST_H
 
-#include <gtest/gtest.h>
-
 #include "../src/Customer.h"
 #include "../src/Basket.h"
 #include "../src/Movie.h"
 #include "../src/Rental.h"
 
 #include "mock_rental.h"
+
+#include <gtest/gtest.h>
 
 using ::testing::Exactly;
 using ::testing::Return;
@@ -100,4 +100,4 @@ TEST(BillingTest, StatementChangeWhenAddingRental) {
   EXPECT_STRNE(billing2.c_str(), billing3.c_str());
 }
 
-#endif //LABO5_BASKETTEST_H
+#endif  // LABO5_BASKETTEST_H

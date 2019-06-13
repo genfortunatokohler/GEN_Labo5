@@ -19,4 +19,4 @@ class Customer {
   std::string name_;
 };
 
-#endif // CUSTOMER_H
+#endif  // CUSTOMER_H

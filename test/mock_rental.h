@@ -1,11 +1,11 @@
 #ifndef LABO5_MOCK_RENTAL_H
 #define LABO5_MOCK_RENTAL_H
 
-#include <gmock/gmock.h>  // Brings in Google Mock.
-
 #include "../src/Rental.h"
 
 #include "mock_movie.h"
+
+#include <gmock/gmock.h>  // Brings in Google Mock.
 
 class MockRental : public Rental {
  private:
@@ -19,4 +19,4 @@ class MockRental : public Rental {
   MockRental(const MockMovie& movie, int days) : Rental(movie, days) {}
 };
 
-#endif //LABO5_MOCK_RENTAL_H
+#endif  // LABO5_MOCK_RENTAL_H

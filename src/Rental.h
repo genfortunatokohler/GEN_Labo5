@@ -17,4 +17,4 @@ class Rental {
   int days_rented_;
 };
 
-#endif // RENTAL_H
+#endif  // RENTAL_H

@@ -1,11 +1,12 @@
 #ifndef LABO5_MOCK_MOVIE_H
-#define LABO5_MOCK_MOVIE_H
-
-#include <gmock/gmock.h>  // Brings in Google Mock.
+#define LABO5_MOCK_MOVIE_H7
 
 #include "../src/Movie.h"
 
 #include "mock_MoviePrice.h"
+
+#include <gmock/gmock.h>  // Brings in Google Mock.
+
 
 class MockMovie : public Movie {
  public:
@@ -17,4 +18,4 @@ class MockMovie : public Movie {
   MockMovie() : Movie("", MockMoviePrice()){}
 };
 
-#endif //LABO5_MOCK_MOVIE_H
+#endif  // LABO5_MOCK_MOVIE_H

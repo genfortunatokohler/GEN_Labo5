@@ -1,9 +1,9 @@
 #ifndef LABO5_MOVIEPRICETEST_H
 #define LABO5_MOVIEPRICETEST_H
 
-#include <gtest/gtest.h>
-
 #include "../src/MoviePrice.h"
+
+#include <gtest/gtest.h>
 
 TEST(MoviePriceTest, NEW_RELEASE_PriceCalculateCorrecly) {
   const MoviePrice &movie_price = MoviePrice::NEW_RELEASE;
@@ -42,4 +42,4 @@ TEST(MoviePriceTest, CHILDRENS_BonusCalculateCorrecly) {
   EXPECT_EQ(movie_price.getBonusPoints(150), 0);
 }
 
-#endif //LABO5_MOVIEPRICETEST_H
+#endif  // LABO5_MOVIEPRICETEST_H

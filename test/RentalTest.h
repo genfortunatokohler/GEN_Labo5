@@ -1,11 +1,11 @@
 #ifndef LABO5_RENTALTEST_H
 #define LABO5_RENTALTEST_H
 
-#include <gmock/gmock.h>
-#include <gtest/gtest.h>
-
 #include "mock_MoviePrice.h"
 #include "mock_movie.h"
+
+#include <gmock/gmock.h>
+#include <gtest/gtest.h>
 
 using ::testing::Exactly;
 using ::testing::Return;
@@ -74,4 +74,4 @@ TEST(RentalTest, areRentalBonusPointsCalculatedProperly) {
   EXPECT_EQ(rental2.getFrequentRenterPoints(), 7);
 }
 
-#endif //LABO5_RENTALTEST_H
+#endif  // LABO5_RENTALTEST_H

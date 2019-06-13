@@ -46,4 +46,4 @@ class MoviePrice {
   std::function<int(int)> bonus_point_calculation_;
 };
 
-#endif //LABO5_MOVIEPRICE_H
+#endif  // LABO5_MOVIEPRICE_H
