@@ -1,5 +1,6 @@
 #include "MoviePrice.h"
 
+// file used only to declare value of enum
 const MoviePrice MoviePrice::REGULAR(2,
     [](int nb_days){
       double res = REGULAR.base_price_;

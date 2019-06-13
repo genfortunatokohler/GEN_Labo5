@@ -3,6 +3,7 @@
 
 #include <functional>
 
+// Java style enum to simplify compare and have some methods in C++
 class MoviePrice {
  public:
   static const MoviePrice REGULAR;
